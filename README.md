@@ -18,17 +18,22 @@ Installation via CRAN `install.packages("dictionary")`
 install.packages("dictionary")
 ```
 
-Get dictionary definition of “hello”
+### Usage
+
+Load library
 
 ``` r
 library(dictionary)
-hello <- define("hello")
 ```
 
-View a word’s **part(s) of speech** and **definition(s)**:
+Get dictionary definition of “hello”, view its **definition(s)** and
+**part(s) of speech**:
 
 ``` r
-hello$meanings
+word <- "hello"
+word_info <- define(word)
+
+word_info$meanings
 ```
 
     ## [[1]]
@@ -44,7 +49,7 @@ hello$meanings
 View a word’s **phonetic**:
 
 ``` r
-hello$phonetic
+word_info$phonetic
 ```
 
     ## [1] "həˈləʊ"
@@ -52,16 +57,10 @@ hello$phonetic
 Hear a word’s **pronunciation**:
 
 ``` r
-hello$phonetics
+word_info$phonetics[[1]]$audio[1]
 ```
 
-    ## [[1]]
-    ##     text
-    ## 1 həˈləʊ
-    ## 2 hɛˈləʊ
-    ##                                                                        audio
-    ## 1 https://ssl.gstatic.com/dictionary/static/sounds/20200429/hello--_gb_1.mp3
-    ## 2                                                                       <NA>
+    ## [1] "https://ssl.gstatic.com/dictionary/static/sounds/20200429/hello--_gb_1.mp3"
 
 To hear the word pronounced out loud, visit the provided url(s):
 <https://ssl.gstatic.com/dictionary/static/sounds/20200429/hello--_gb_1.mp3>

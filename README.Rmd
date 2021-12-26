@@ -28,28 +28,34 @@ install.packages("dictionary")
 ``` 
 
 
-Get dictionary definition of "hello"
+### Usage
+
+Load library
 
 ```{r message=FALSE}
 
 library(dictionary)
-hello <- define("hello")
 
 ``` 
 
 
-View a word's **part(s) of speech** and **definition(s)**:
+Get dictionary definition of "hello", view its **definition(s)** and 
+**part(s) of speech**:
 
 ```{r}
-hello$meanings
+
+word <- "hello"
+word_info <- define(word)
+
+word_info$meanings
 ```
+
 
 
 View a word's **phonetic**:
 
-
 ```{r}
-hello$phonetic
+word_info$phonetic
 ```
 
 
@@ -57,7 +63,7 @@ Hear a word's **pronunciation**:
 
 ```{r}
 
-hello$phonetics
+word_info$phonetics[[1]]$audio[1]
 
 ```
 
