@@ -26,13 +26,15 @@ Future: Installation via CRAN `install.packages("dictionary")`
 install.packages("dictionary")
 ```
 
-### Usage
+## Usage
 
 Load library
 
 ``` r
 library(dictionary)
 ```
+
+### Definitions
 
 Get dictionary definition of “hello”, view its **definition(s)** and
 **part(s) of speech**:
@@ -54,7 +56,9 @@ word_info$meanings
     ## 2 an utterance of ‘hello’; a greeting., she was getting polite nods and hellos from people
     ## 3                            say or shout ‘hello’., I pressed the phone button and helloed
 
-View a word’s **phonetic**:
+### Phonetics
+
+View a word’s **phonetic** with:
 
 ``` r
 word_info$phonetic

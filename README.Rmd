@@ -38,7 +38,7 @@ install.packages("dictionary")
 ``` 
 
 
-### Usage
+## Usage
 
 Load library
 
@@ -48,6 +48,8 @@ library(dictionary)
 
 ``` 
 
+
+### Definitions
 
 Get dictionary definition of "hello", view its **definition(s)** and 
 **part(s) of speech**:
@@ -61,8 +63,9 @@ word_info$meanings
 ```
 
 
+### Phonetics
 
-View a word's **phonetic**:
+View a word's **phonetic** with:
 
 ```{r}
 word_info$phonetic
