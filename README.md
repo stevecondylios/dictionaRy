@@ -12,7 +12,15 @@ phonetics, and origin of English words.
 
 ### Installation
 
-Installation via CRAN `install.packages("dictionary")`
+Installation via GitHub
+`devtools::install_github("stevecondylios/dictionary")`
+
+``` r
+# install.packages("devtools")
+devtools::install_github("stevecondylios/dictionary")
+```
+
+Future: Installation via CRAN `install.packages("dictionary")`
 
 ``` r
 install.packages("dictionary")

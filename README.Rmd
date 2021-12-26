@@ -19,7 +19,17 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Installation
 
-Installation via CRAN `install.packages("dictionary")`
+Installation via GitHub `devtools::install_github("stevecondylios/dictionary")`
+
+```{r message=FALSE, eval = FALSE}
+
+# install.packages("devtools")
+devtools::install_github("stevecondylios/dictionary")
+
+```
+
+
+Future: Installation via CRAN `install.packages("dictionary")`
 
 ```{r message=FALSE, eval = FALSE}
 
