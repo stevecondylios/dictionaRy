@@ -1,8 +1,8 @@
 Package: dictionary
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Get the Dictionary Definition of English Words
 Version: 0.1.0
-Imports: jsonlite
+Depends: jsonlite
 Authors@R: c(
     person("Steve", "Condylios", , "steve.condylios@gmail.com", c("aut", "cre"), 
     comment = c(ORCID = "0000-0003-0599-844X"))
@@ -12,8 +12,10 @@ BugReports: https://github.com/stevecondylios/dictionary/issues
 URL: https://github.com/stevecondylios/dictionary
 Description: R interface to the 'Free Dictionary API' 
     <https://dictionaryapi.dev/>, 
-    <https://github.com/meetDeveloper/freeDictionaryAPI>. Allows for 
-    convenient retrieval of dictionary definitions for English words.
+    <https://github.com/meetDeveloper/freeDictionaryAPI>. Conveniently retrieve
+    dictionary definitions for English words, as well 
+    as additional information including phonetics, part of speech, and 
+    word origin.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

@@ -1,4 +1,4 @@
-#' Retrieve a Transmission Control Protocol (TCP) port that is not currently in use
+#' Retrieve the dictionary definition of an English word
 #'
 #' @name define
 #'
@@ -9,7 +9,7 @@
 #'     word, phonetic, phonetics, origin, and meanings
 #'
 #' @export
-#' @import fromJSON
+#' @import jsonlite
 #'
 #' @examples
 #' \dontrun{
@@ -51,8 +51,33 @@ define <- function(word) {
     }
   }
 
+  # Complete pronunciation URLs
+
+  if(!is.null(out$phonetics)) {
+
+    urls <- out$phonetics[[1]]$audio
+
+    out$phonetics[[1]]$audio <- ifelse(
+      is.na(urls),
+      NA,
+      paste0("https:", urls)
+      )
+  }
+
   out
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -2,7 +2,7 @@
 % Please edit documentation in R/define.R
 \name{define}
 \alias{define}
-\title{Retrieve a Transmission Control Protocol (TCP) port that is not currently in use}
+\title{Retrieve the dictionary definition of an English word}
 \usage{
 define(word)
 }
@@ -14,7 +14,7 @@ A data.frame with as many rows as distinct meanings, and columns for
     word, phonetic, phonetics, origin, and meanings
 }
 \description{
-Retrieve a Transmission Control Protocol (TCP) port that is not currently in use
+Retrieve the dictionary definition of an English word
 }
 \examples{
 \dontrun{

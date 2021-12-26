@@ -1,0 +1,75 @@
+
+---
+output: github_document
+---
+  
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# dictionary <a href='https://github.com/stevecondylios/dictionary'></a>
+
+
+<!-- badges: start -->
+[![CRAN status](https://www.r-pkg.org/badges/version/dictionary)](https://cran.r-project.org/package=dictionary)
+<!-- badges: end -->
+
+`dictionary` gives the ability to get the dictionary definition, phonetics, and origin of English words. 
+
+
+### Installation
+
+Installation via CRAN `install.packages("dictionary")`
+
+```{r message=FALSE, eval = FALSE}
+
+install.packages("dictionary")
+
+``` 
+
+
+Get dictionary definition of "hello"
+
+```{r message=FALSE}
+
+library(dictionary)
+hello <- define("hello")
+
+``` 
+
+
+View a word's **part(s) of speech** and **definition(s)**:
+
+```{r}
+hello$meanings
+```
+
+
+View a word's **phonetic**:
+
+
+```{r}
+hello$phonetic
+```
+
+
+Hear a word's **pronunciation**:
+
+```{r}
+
+hello$phonetics
+
+```
+
+To hear the word pronounced out loud, visit the provided url(s): https://ssl.gstatic.com/dictionary/static/sounds/20200429/hello--_gb_1.mp3
+
+
+
+
+
+
+
+
+
+
+
