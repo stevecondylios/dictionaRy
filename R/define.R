@@ -13,10 +13,10 @@
 #'
 #' @examples
 #' \dontrun{
-#'   Get the definition of "hello"
+#'   # Get the definition of "hello"
 #'   define("hello") # Returns a 1 row data.frame
 #'
-#'   Homonyms (words with >1 meaning)
+#'   # Homonyms (words with >1 meaning)
 #'   define("bark") # Returns a 4 row data.frame
 #'
 #'   # Unknown words will error
