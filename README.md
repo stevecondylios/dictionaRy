@@ -1,5 +1,5 @@
 
-# dictionary <a href='https://github.com/stevecondylios/dictionary'></a>
+# dictionary <img src="man/figures/dark-logo.png" align="right" height="139" />
 
 <!-- badges: start -->
 
@@ -9,6 +9,8 @@ status](https://www.r-pkg.org/badges/version/dictionary)](https://cran.r-project
 
 `dictionary` gives the ability to get the dictionary definition,
 phonetics, and origin of English words.
+
+<a href='https://github.com/stevecondylios/dictionary'></a>
 
 ### Installation
 
