@@ -1,4 +1,4 @@
-Package: dictionary
+Package: dictionaRy
 Type: Package
 Title: Get the Dictionary Definition of English Words
 Version: 0.1.0
@@ -9,8 +9,8 @@ Authors@R: c(
     person("Zane", "Dax", , , "ctb")
     )
 Maintainer: Steve Condylios <steve.condylios@gmail.com>
-BugReports: https://github.com/stevecondylios/dictionary/issues
-URL: https://github.com/stevecondylios/dictionary
+BugReports: https://github.com/stevecondylios/dictionaRy/issues
+URL: https://github.com/stevecondylios/dictionaRy
 Description: R interface to the 'Free Dictionary API' 
     <https://dictionaryapi.dev/>, 
     <https://github.com/meetDeveloper/freeDictionaryAPI>. Conveniently retrieve

@@ -1,31 +1,31 @@
 
-# dictionary <img src="man/figures/dark-logo.png" align="right" height="139" />
+# dictionaRy <img src="man/figures/dark-logo.png" align="right" height="139" />
 
 <!-- badges: start -->
 
 [![CRAN
-status](https://www.r-pkg.org/badges/version/dictionary)](https://cran.r-project.org/package=dictionary)
+status](https://www.r-pkg.org/badges/version/dictionaRy)](https://cran.r-project.org/package=dictionaRy)
 <!-- badges: end -->
 
 `dictionary` gives the ability to get the dictionary definition,
 phonetics, and origin of English words.
 
-<a href='https://github.com/stevecondylios/dictionary'></a>
+<a href='https://github.com/stevecondylios/dictionaRy'></a>
 
 ### Installation
 
 Installation via GitHub
-`devtools::install_github("stevecondylios/dictionary")`
+`devtools::install_github("stevecondylios/dictionaRy")`
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("stevecondylios/dictionary")
+devtools::install_github("stevecondylios/dictionaRy")
 ```
 
-Future: Installation via CRAN `install.packages("dictionary")`
+Future: Installation via CRAN `install.packages("dictionaRy")`
 
 ``` r
-install.packages("dictionary")
+install.packages("dictionaRy")
 ```
 
 ## Usage
@@ -33,7 +33,7 @@ install.packages("dictionary")
 Load library
 
 ``` r
-library(dictionary)
+library(dictionaRy)
 ```
 
 ### Definitions
