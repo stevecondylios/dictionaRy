@@ -7,7 +7,7 @@
 status](https://www.r-pkg.org/badges/version/dictionaRy)](https://cran.r-project.org/package=dictionaRy)
 <!-- badges: end -->
 
-`dictionary` gives the ability to get the dictionary definition,
+`dictionaRy` gives the ability to get the dictionary definition,
 phonetics, and origin of English words.
 
 <a href='https://github.com/stevecondylios/dictionaRy'></a>
