@@ -16,7 +16,8 @@ Description: An R interface to the 'Free Dictionary API'
     <https://github.com/meetDeveloper/freeDictionaryAPI>. Retrieve
     dictionary definitions for English words, as well 
     as additional information including phonetics, part of speech, origins, 
-    audio pronunciation, example usage, synonyms and antonyms. 
+    audio pronunciation, example usage, synonyms and antonyms, returned in 
+    'tidy' format for ease of use.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

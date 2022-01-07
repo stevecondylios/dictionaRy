@@ -7,8 +7,9 @@
 status](https://www.r-pkg.org/badges/version/dictionaRy)](https://cran.r-project.org/package=dictionaRy)
 <!-- badges: end -->
 
-Retrieve the dictionary definition of an English word, along with its
-phonetics, origins, examples, synonyms, and antonyms.
+Retrieve the dictionary definition of English words in tidy format,
+along with their phonetics, audio pronunciation, parts of speech,
+origins, examples, synonyms, and antonyms.
 
 ### Installation
 
