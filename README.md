@@ -258,7 +258,7 @@ map_df(words, ~ define(.x))
     ## #   antonyms <I<list>>
 
 Note that words which aren’t found in the English dictionary will return
-0 row tibbles, and hence will have no affect on the resulting tibble
+0 row tibbles, and hence will have no effect on the resulting tibble
 
 ``` r
 words <- c("hit ", "sldkfjlsdjkf")
