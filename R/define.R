@@ -49,8 +49,8 @@ define <- function(word) {
       origin = character(),
       definition = character(),
       example = character(),
-      synonyms = character(),
-      antonyms = character(),
+      synonyms = structure(list(), class = "AsIs"),
+      antonyms = structure(list(), class = "AsIs"),
       stringsAsFactors = FALSE
     )
 
