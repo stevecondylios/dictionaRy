@@ -134,8 +134,8 @@ The verb has 2 definitions `(of a dog, fox, or seal) give a bark` and
 of 3 definitions just for the first of four meanings of 'bark' (and more for
 the second, third, and fourth). 
 
-- If a word cannot be found in the English dictionary a 0-row data.frame will be
-rturned, and message to that effect printed to the console (e.g. 
+- If a word cannot be found in the English dictionary a 0-row tibble will be
+returned, and message to that effect printed to the console (e.g. 
 `define("sdlkfjsldkjf")`).
 
 <hr>
@@ -205,11 +205,11 @@ map_df(words, ~ define(.x))
 
 
 Note that words which aren't found in the English dictionary will return
-0 row data.frames, and hence will have no affect on the resulting data.frame
+0 row tibbles, and hence will have no affect on the resulting tibble
 
 ```{r}
 
-words <- c("hi", "sldkfjlsdjkf")
+words <- c("paint", "sldkfjlsdjkf")
 
 map_df(words, ~ define(.x))
 

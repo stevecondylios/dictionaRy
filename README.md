@@ -143,9 +143,9 @@ word_info %>%
     have a total of 3 definitions just for the first of four meanings of
     ‘bark’ (and more for the second, third, and fourth).
 
--   If a word cannot be found in the English dictionary a 0-row
-    data.frame will be rturned, and message to that effect printed to
-    the console (e.g.  `define("sdlkfjsldkjf")`).
+-   If a word cannot be found in the English dictionary a 0-row tibble
+    will be returned, and message to that effect printed to the console
+    (e.g.  `define("sdlkfjsldkjf")`).
 
 <hr>
 
@@ -258,22 +258,28 @@ map_df(words, ~ define(.x))
     ## #   antonyms <I<list>>
 
 Note that words which aren’t found in the English dictionary will return
-0 row data.frames, and hence will have no affect on the resulting
-data.frame
+0 row tibbles, and hence will have no affect on the resulting tibble
 
 ``` r
-words <- c("hi", "sldkfjlsdjkf")
+words <- c("hit ", "sldkfjlsdjkf")
 
 map_df(words, ~ define(.x))
 ```
 
     ## No definition found for sldkfjlsdjkf
 
-    ## # A tibble: 2 x 10
+    ## # A tibble: 9 x 10
     ##   word  meaning_number part_of_speech phonetic audio  origin  definition example
     ##   <chr>          <int> <chr>          <chr>    <chr>  <chr>   <chr>      <chr>  
-    ## 1 hi                 1 exclamation    hʌɪ      https… natura… used as a… ‘Hi th…
-    ## 2 HI                 2 abbreviation   <NA>     <NA>   <NA>    Hawaii (i… <NA>   
+    ## 1 hit                1 verb           hɪt      https… late O… bring one… the wo…
+    ## 2 hit                1 verb           hɪt      https… late O… (of a mis… the sn…
+    ## 3 hit                1 verb           hɪt      https… late O… cause har… the ar…
+    ## 4 hit                1 verb           hɪt      https… late O… reach (a … capita…
+    ## 5 hit                1 verb           hɪt      https… late O… propel (a… <NA>   
+    ## 6 hit                1 noun           hɪt      https… late O… an instan… few st…
+    ## 7 hit                1 noun           hɪt      https… late O… an instan… one of…
+    ## 8 hit                1 noun           hɪt      https… late O… a success… he was…
+    ## 9 hit                1 noun           hɪt      https… late O… a dose of… in ano…
     ## # … with 2 more variables: synonyms <I<list>>, antonyms <I<list>>
 
 ### Bug reports, suggestions, pull requests
