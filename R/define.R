@@ -31,31 +31,6 @@
 # Get the definition of a word (English)
 
 define <- function(word) {
-  base_url <- "https://api.dictionaryapi.dev/api/v2/entries/en/"
-  url <- paste0(base_url, word)
-  api_response <- tryCatch(fromJSON(url), error = function(e) { e } )
-
-  if("error" %in% class(api_response)) {
-
-    error_message <- paste(api_response)
-
-    if(grepl("404", error_message)) {
-      # A 404 is typically because the word isn't found
-      # Technically could be a legitimate 404, but it still
-      # means that the word's definition couldn't be provided
-      # and so makes little difference to the user of the function
-      stop("Sorry, word not found")
-    } else {
-      # provide any errors other than 404s to expediate debugging
-      stop(api_response)
-    }
-  }
-
-
-
-  # Make data 'tidy'
-  # word, meaning_group (1, 2, 3, etc), part_of_speech, phonetic, audio, origin, definition, examples, synonyms, antonyms
-
 
   make_df <- function(nrow) {
     if (missing(nrow)) {
@@ -83,6 +58,36 @@ define <- function(word) {
     temp_df
   }
 
+
+  base_url <- "https://api.dictionaryapi.dev/api/v2/entries/en/"
+  url <- paste0(base_url, word)
+  api_response <- tryCatch(fromJSON(url), error = function(e) { e } )
+
+    if("error" %in% class(out)) {
+
+    error_message <- paste(out)
+
+    if(grepl("404", error_message)) {
+      # A 404 is typically because the word isn't found
+      # Technically could be a legitimate 404
+      final_df <- make_df()
+      message(paste0("No definition found for ", word))
+      return(final_df)
+    } else {
+      # provide any errors other than 404s to expediate debugging
+      stop(out)
+    }
+  }
+
+
+  if("error" %in% class(api_response)) {
+
+    }
+
+
+
+  # Make data 'tidy'
+  # word, meaning_group (1, 2, 3, etc), part_of_speech, phonetic, audio, origin, definition, examples, synonyms, antonyms
 
   final_df <- make_df()
 
@@ -182,15 +187,6 @@ define <- function(word) {
     final_df <- rbind(final_df, mini_df)
 
   }
-
-
-  # A word can have muliptle meanings
-  # E.g. "bark" can be a dog's bark or the bark on a tree
-  # A specific meaning can be of muiltiple parts of speech
-  # E.g. a dog's 'bark' can be used as a noun or verb
-  # A given word meaning in a specific part of speech can have multiple definitions
-
-
 
   # Complete pronunciation URLs
 
