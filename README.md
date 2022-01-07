@@ -48,7 +48,7 @@ word <- "hello"
     ## 1 hello              1 exclamation    həˈləʊ   https… early … used as a… hello …
     ## 2 hello              1 noun           həˈləʊ   https… early … an uttera… she wa…
     ## 3 hello              1 verb           həˈləʊ   https… early … say or sh… I pres…
-    ## # … with 2 more variables: synomyms <I<list>>, antonyms <I<list>>
+    ## # … with 2 more variables: synonyms <I<list>>, antonyms <I<list>>
 
 ### Definitions and parts of speech
 
@@ -162,7 +162,7 @@ define("hello")
     ## 1 hello              1 exclamation    həˈləʊ   https… early … used as a… hello …
     ## 2 hello              1 noun           həˈləʊ   https… early … an uttera… she wa…
     ## 3 hello              1 verb           həˈləʊ   https… early … say or sh… I pres…
-    ## # … with 2 more variables: synomyms <I<list>>, antonyms <I<list>>
+    ## # … with 2 more variables: synonyms <I<list>>, antonyms <I<list>>
 
 “bark”
 
@@ -182,7 +182,7 @@ define("bark")
     ## 7 bark                2 verb           bɑːk     https… Middl… tan or dy… <NA>   
     ## 8 bark                3 noun           bɑːk     https… late … a ship or… <NA>   
     ## 9 barque              4 noun           bɑːk     https… Middl… a sailing… <NA>   
-    ## # … with 2 more variables: synomyms <I<list>>, antonyms <I<list>>
+    ## # … with 2 more variables: synonyms <I<list>>, antonyms <I<list>>
 
 “set” (..is said to have more meanings than any other English word!)
 
@@ -203,7 +203,7 @@ define("set")
     ##  8 set                1 verb           sɛt      https… Old E… (of bloss… wait u…
     ##  9 set                1 verb           sɛt      https… Old E… sit.       the re…
     ## 10 set                2 noun           sɛt      https… late … a group o… a set …
-    ## # … with 15 more rows, and 2 more variables: synomyms <I<list>>,
+    ## # … with 15 more rows, and 2 more variables: synonyms <I<list>>,
     ## #   antonyms <I<list>>
 
 “lead” is an example of a
@@ -223,7 +223,7 @@ define("lead") %>%
     ##   <chr>          <int> <chr>          <chr>    <chr>  <chr>   <chr>      <chr>  
     ## 1 lead               1 verb           liːd     https… Old En… cause (a … she em…
     ## 2 lead               2 noun           lɛd      https… Old En… a soft, h… <NA>   
-    ## # … with 2 more variables: synomyms <I<list>>, antonyms <I<list>>
+    ## # … with 2 more variables: synonyms <I<list>>, antonyms <I<list>>
 
 Visit the audio links for the first and second definitions of “lead”:
 
@@ -253,7 +253,7 @@ map_df(words, ~ define(.x))
     ##  8 bark               2 noun           bɑːk     https… Middl… thin shee… white …
     ##  9 bark               2 verb           bɑːk     https… Middl… strip the… they h…
     ## 10 bark               2 verb           bɑːk     https… Middl… tan or dy… <NA>   
-    ## # … with 43 more rows, and 2 more variables: synomyms <I<list>>,
+    ## # … with 43 more rows, and 2 more variables: synonyms <I<list>>,
     ## #   antonyms <I<list>>
 
 ### Bug reports, suggestions, pull requests

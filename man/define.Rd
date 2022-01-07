@@ -10,8 +10,9 @@ define(word)
 \item{word}{The word you wish to define}
 }
 \value{
-A data.frame with as many rows as distinct meanings, and columns for
-    word, phonetic, phonetics, origin, and meanings
+A tibble with a row for each unique combination of word,
+    meaning_number, part_of_speech, phonetic, audio, origin, definition,
+    example, synonyms, and antonyms.
 }
 \description{
 Retrieve the dictionary definition of an English word

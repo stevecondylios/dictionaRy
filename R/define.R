@@ -5,8 +5,9 @@
 #' @usage define(word)
 #' @param word The word you wish to define
 #'
-#' @return A data.frame with as many rows as distinct meanings, and columns for
-#'     word, phonetic, phonetics, origin, and meanings
+#' @return A tibble with a row for each unique combination of word,
+#'     meaning_number, part_of_speech, phonetic, audio, origin, definition,
+#'     example, synonyms, and antonyms.
 #'
 #' @export
 #' @import jsonlite tibble
@@ -47,7 +48,7 @@ define <- function(word) {
       origin = character(),
       definition = character(),
       example = character(),
-      synomyms = character(),
+      synonyms = character(),
       antonyms = character(),
       stringsAsFactors = FALSE
     )
@@ -173,7 +174,7 @@ define <- function(word) {
 
     # Now place the list of lists into the data.frame column for synonyms and antonyms respectively
 
-    mini_df$synomyms <- I(synonyms)
+    mini_df$synonyms <- I(synonyms)
     mini_df$antonyms <- I(antonyms)
     # I() keeps the data 'As.is' (i.e. forces it to stay as a list)
     # See here: https://stackoverflow.com/a/9547594/5783745
