@@ -194,16 +194,11 @@ define <- function(word) {
 
   # Complete pronunciation URLs
 
-  # if(!is.null(out$phonetics)) {
-  #
-  #   urls <- out$phonetics[[1]]$audio
-  #
-  #   out$phonetics[[1]]$audio <- ifelse(
-  #     is.na(urls),
-  #     NA,
-  #     paste0("https:", urls)
-  #     )
-  # }
+  final_df$audio <- ifelse(
+    is.na(final_df$audio),
+    NA,
+    paste0("https:", final_df$audio)
+    )
 
   final_df
 }
