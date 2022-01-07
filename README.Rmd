@@ -7,7 +7,7 @@ output: github_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# <a href='https://github.com/stevecondylios/dictionaRy'>dictionaRy <img src="man/figures/light-logo.png" align="right" height="139" /></a>
+# dictionaRy <a href='https://github.com/stevecondylios/dictionaRy'><img src="man/figures/light-logo.png" align="right" height="139" /></a>
 
 
 
@@ -94,7 +94,7 @@ word_info %>%
 ```
 
 
-### Phonetic 
+### Phonetics
 
 ```{r}
 
@@ -115,9 +115,9 @@ word_info %>%
 
 ```
 
+<hr>
 
-
-### On the relationship between word meanings, parts of speech, and definitions
+### Technical details on the relationship between word meanings, parts of speech, and definitions
 
 - A **word** that is found in the English dictionary may have one or
 more **meaning**s
@@ -125,7 +125,7 @@ more **meaning**s
   - each combination of **meaning** and **part of speech** will have one or more 
   **definitions**. 
 
-- Example: the word *bark* has 4 meanings. Let's take the firs meaning:
+- Example: the word *bark* has 4 meanings. Take the first meaning:
 a dog's bark. This meaning has 2 parts of speech (*noun* and *verb*). 
 The noun has 1 definition `the sharp explosive cry of a dog, fox, or seal`.  
 The verb has 2 definitions `(of a dog, fox, or seal) give a bark` and 
@@ -137,9 +137,9 @@ the second, third, and fourth).
 rturned, and message to that effect printed to the console (e.g. 
 `define("sdlkfjsldkjf")`).
 
+<hr>
 
-
-### Some examples
+### More examples
 
 "hello"
 
@@ -159,7 +159,7 @@ define("bark")
 ```
 
 
-"set" - said to have the most meanings of any English word!
+"set" (..is said to have more meanings than any other English word!)
 
 ```{r}
 
@@ -181,18 +181,21 @@ define("lead") %>%
 
 ```
 
-Let's visit the audio links for the first and second definitions of "lead":
+Visit the audio links for the first and second definitions of "lead":
 
 1. https://ssl.gstatic.com/dictionary/static/sounds/20200429/lead--_gb_1.mp3
 2. https://ssl.gstatic.com/dictionary/static/sounds/20200429/lead--_gb_2.mp3
 
 
 
+### Advanced usage
+
 
 Iterate over many words
 
 
 ```{r}
+
 words <- c("hello", "bark", "set", "lead")
 
 map_df(words, ~ define(.x))

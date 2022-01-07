@@ -1,5 +1,5 @@
 
-# <a href='https://github.com/stevecondylios/dictionaRy'>dictionaRy <img src="man/figures/light-logo.png" align="right" height="139" /></a>
+# dictionaRy <a href='https://github.com/stevecondylios/dictionaRy'><img src="man/figures/light-logo.png" align="right" height="139" /></a>
 
 <!-- badges: start -->
 
@@ -92,7 +92,7 @@ word_info %>%
     ## 2 she was getting polite nods and hellos from people
     ## 3 I pressed the phone button and helloed
 
-### Phonetic
+### Phonetics
 
 ``` r
 word_info %>% 
@@ -122,7 +122,9 @@ word_info %>%
     ## 2 https://ssl.gstatic.com/dictionary/static/sounds/20200429/hello--_gb_1.mp3
     ## 3 https://ssl.gstatic.com/dictionary/static/sounds/20200429/hello--_gb_1.mp3
 
-### On the relationship between word meanings, parts of speech, and definitions
+<hr>
+
+### Technical details on the relationship between word meanings, parts of speech, and definitions
 
 -   A **word** that is found in the English dictionary may have one or
     more **meaning**s
@@ -131,9 +133,9 @@ word_info %>%
     -   each combination of **meaning** and **part of speech** will have
         one or more **definitions**.
 
--   Example: the word *bark* has 4 meanings. Let’s take the firs
-    meaning: a dog’s bark. This meaning has 2 parts of speech (*noun*
-    and *verb*). The noun has 1 definition
+-   Example: the word *bark* has 4 meanings. Take the first meaning: a
+    dog’s bark. This meaning has 2 parts of speech (*noun* and *verb*).
+    The noun has 1 definition
     `the sharp explosive cry of a dog, fox, or seal`.  
     The verb has 2 definitions `(of a dog, fox, or seal) give a bark`
     and `utter (a command or question) abruptly or aggressively`. So we
@@ -144,7 +146,9 @@ word_info %>%
     data.frame will be rturned, and message to that effect printed to
     the console (e.g.  `define("sdlkfjsldkjf")`).
 
-### Some examples
+<hr>
+
+### More examples
 
 “hello”
 
@@ -160,8 +164,7 @@ define("hello")
     ## 3 hello              1 verb           həˈləʊ   https… early … say or sh… I pres…
     ## # … with 2 more variables: synomyms <I<list>>, antonyms <I<list>>
 
-“bark” has 4 meanings, multiple parts of speech, and mulitple
-definitions:
+“bark”
 
 ``` r
 define("bark")
@@ -181,7 +184,7 @@ define("bark")
     ## 9 barque              4 noun           bɑːk     https… Middl… a sailing… <NA>   
     ## # … with 2 more variables: synomyms <I<list>>, antonyms <I<list>>
 
-“set” is said to be the English word with the most meanings
+“set” (..is said to have more meanings than any other English word!)
 
 ``` r
 define("set")
@@ -222,11 +225,12 @@ define("lead") %>%
     ## 2 lead               2 noun           lɛd      https… Old En… a soft, h… <NA>   
     ## # … with 2 more variables: synomyms <I<list>>, antonyms <I<list>>
 
-Let’s visit the audio links for the first and second definitions of
-“lead”:
+Visit the audio links for the first and second definitions of “lead”:
 
 1.  <https://ssl.gstatic.com/dictionary/static/sounds/20200429/lead--_gb_1.mp3>
 2.  <https://ssl.gstatic.com/dictionary/static/sounds/20200429/lead--_gb_2.mp3>
+
+### Advanced usage
 
 Iterate over many words
 
