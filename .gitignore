@@ -3,7 +3,7 @@
 *.Rhistory
 *.RData
 *.Ruserdata
-**.DS_Store
+**/.DS_Store
 docs
 dictionary.Rcheck/
 
