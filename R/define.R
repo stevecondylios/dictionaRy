@@ -63,9 +63,9 @@ define <- function(word) {
   url <- paste0(base_url, word)
   api_response <- tryCatch(fromJSON(url), error = function(e) { e } )
 
-    if("error" %in% class(out)) {
+    if("error" %in% class(api_response)) {
 
-    error_message <- paste(out)
+    error_message <- paste(api_response)
 
     if(grepl("404", error_message)) {
       # A 404 is typically because the word isn't found
@@ -75,7 +75,7 @@ define <- function(word) {
       return(final_df)
     } else {
       # provide any errors other than 404s to expediate debugging
-      stop(out)
+      stop(api_response)
     }
   }
 
