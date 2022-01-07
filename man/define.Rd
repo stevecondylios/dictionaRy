@@ -10,7 +10,8 @@ define(word)
 \item{word}{The word you wish to define}
 }
 \value{
-A tibble with a row for each unique combination of word,
+A tibble with a row for each unique combination of word, meaning,
+    part of speech, and definition, and a column for each of
     meaning_number, part_of_speech, phonetic, audio, origin, definition,
     example, synonyms, and antonyms.
 }
