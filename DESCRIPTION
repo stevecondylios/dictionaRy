@@ -2,7 +2,7 @@ Package: dictionaRy
 Type: Package
 Title: Get the Dictionary Definition of English Words
 Version: 0.1.0
-Depends: jsonlite
+Depends: jsonlite, tibble
 Authors@R: c(
     person("Steve", "Condylios", , "steve.condylios@gmail.com", c("aut", "cre"), 
     comment = c(ORCID = "0000-0003-0599-844X")),
