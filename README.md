@@ -1,5 +1,5 @@
 
-# dictionaRy <img src="man/figures/dark-logo.png" align="right" height="139" />
+# <a href='https://github.com/stevecondylios/dictionaRy'>dictionaRy <img src="man/figures/light-logo.png" align="right" height="139" /></a>
 
 <!-- badges: start -->
 
@@ -7,10 +7,8 @@
 status](https://www.r-pkg.org/badges/version/dictionaRy)](https://cran.r-project.org/package=dictionaRy)
 <!-- badges: end -->
 
-`dictionaRy` gives the ability to get the dictionary definition,
-phonetics, and origin of English words.
-
-<a href='https://github.com/stevecondylios/dictionaRy'></a>
+Retrieve the dictionary definition of an English word, along with its
+phonetics, origins, examples, synonyms, and antonyms.
 
 ### Installation
 
@@ -38,43 +36,48 @@ library(dictionaRy)
 
 ### Definitions
 
-Get dictionary definition of “hello”, view its **definition(s)** and
-**part(s) of speech**:
+Get definition of “hello”:
 
 ``` r
 word <- "hello"
-word_info <- define(word)
-
-word_info$meanings
+as_tibble(define(word))
 ```
 
-    ## [[1]]
-    ##   partOfSpeech
-    ## 1  exclamation
-    ## 2         noun
-    ## 3         verb
-    ##                                                                                definitions
-    ## 1                used as a greeting or to begin a phone conversation., hello there, Katie!
-    ## 2 an utterance of ‘hello’; a greeting., she was getting polite nods and hellos from people
-    ## 3                            say or shout ‘hello’., I pressed the phone button and helloed
+    ## # A tibble: 3 x 10
+    ##   word  meaning_number part_of_speech phonetic audio  origin  definition example
+    ##   <chr>          <int> <chr>          <chr>    <chr>  <chr>   <chr>      <chr>  
+    ## 1 hello              1 exclamation    həˈləʊ   https… early … used as a… hello …
+    ## 2 hello              1 noun           həˈləʊ   https… early … an uttera… she wa…
+    ## 3 hello              1 verb           həˈləʊ   https… early … say or sh… I pres…
+    ## # … with 2 more variables: synomyms <I<lgl>>, antonyms <I<lgl>>
 
-### Phonetics
+### On the relationship between word meanings, parts of speech, and definitions
 
-View a word’s **phonetic** with:
+-   A **word** that is found in the English dictionary may have one or
+    more meanings
+    -   each meaning can have one or more **parts of speech**.
+    -   each combination of meaning and part of speech will have one or
+        more definitions.
 
-``` r
-word_info$phonetic
-```
+For example, the word *bark* has 4 meanings. Let’s take the firs
+meaning: a dog’s bark. This meaning has 2 parts of speech (*noun* and
+*verb*). The noun has 1 definition
+`the sharp explosive cry of a dog, fox, or seal`.  
+The verb has 2 definitions `(of a dog, fox, or seal) give a bark` and
+`utter (a command or question) abruptly or aggressively`. So we have a
+total of 3 definitions just for the first of four meanings of ‘bark’
+(and more for the second, third, and fourth). Language is complicated :)
 
-    ## [1] "həˈləʊ"
+-   If a word cannot be found in the English dictionary a 0-row
+    data.frame will be rturned, and message to that effect printed to
+    the console (e.g.  `define("sdlkfjsldkjf")`).
 
-Hear a word’s **pronunciation**:
+### Bug reports, suggestions, pull requests
 
-``` r
-word_info$phonetics[[1]]$audio[1]
-```
-
-    ## [1] "https://ssl.gstatic.com/dictionary/static/sounds/20200429/hello--_gb_1.mp3"
-
-To hear the word pronounced out loud, visit the provided url(s):
-<https://ssl.gstatic.com/dictionary/static/sounds/20200429/hello--_gb_1.mp3>
+-   Please reports bugs on the
+    [issues](https://github.com/stevecondylios/dictionaRy/issues) page.
+-   Please make suggestions on the
+    [issues](https://github.com/stevecondylios/dictionaRy/issues) page.
+-   Please open an issue before making a pull request, unless it’s for a
+    typo.
+-   Thank you!
