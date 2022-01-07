@@ -19,13 +19,14 @@ Retrieve the dictionary definition of an English word
 \examples{
 \dontrun{
   # Get the definition of "hello"
-  define("hello") # Returns a 1 row data.frame
+  define("hello") # Returns a 3 row data.frame
 
   # Homonyms (words with >1 meaning)
-  define("bark") # Returns a 4 row data.frame
+  define("bark") # Returns a 9 row data.frame
 
-  # Unknown words will error
+  # Unknown words will return a 0 row data.frame and message
   define("sdfsdfsdfsdfsdf")
+  # No definition found for sdfsdfsdfsdfsdf
 
 }
 
