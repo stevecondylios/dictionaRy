@@ -226,7 +226,7 @@ define("lead") %>%
     ## 2 lead               2 noun           lɛd      https… Old En… a soft, h… <NA>   
     ## # … with 2 more variables: synonyms <I<list>>, antonyms <I<list>>
 
-Visit the audio links for the first and second definitions of “lead”:
+Visit the audio links for the first and second meanings of “lead”:
 
 1.  <https://ssl.gstatic.com/dictionary/static/sounds/20200429/lead--_gb_1.mp3>
 2.  <https://ssl.gstatic.com/dictionary/static/sounds/20200429/lead--_gb_2.mp3>
@@ -256,6 +256,25 @@ map_df(words, ~ define(.x))
     ## 10 bark               2 verb           bɑːk     https… Middl… tan or dy… <NA>   
     ## # … with 43 more rows, and 2 more variables: synonyms <I<list>>,
     ## #   antonyms <I<list>>
+
+Note that words which aren’t found in the English dictionary will return
+0 row data.frames, and hence will have no affect on the resulting
+data.frame
+
+``` r
+words <- c("hi", "sldkfjlsdjkf")
+
+map_df(words, ~ define(.x))
+```
+
+    ## No definition found for sldkfjlsdjkf
+
+    ## # A tibble: 2 x 10
+    ##   word  meaning_number part_of_speech phonetic audio  origin  definition example
+    ##   <chr>          <int> <chr>          <chr>    <chr>  <chr>   <chr>      <chr>  
+    ## 1 hi                 1 exclamation    hʌɪ      https… natura… used as a… ‘Hi th…
+    ## 2 HI                 2 abbreviation   <NA>     <NA>   <NA>    Hawaii (i… <NA>   
+    ## # … with 2 more variables: synonyms <I<list>>, antonyms <I<list>>
 
 ### Bug reports, suggestions, pull requests
 
