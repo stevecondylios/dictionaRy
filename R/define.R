@@ -9,18 +9,19 @@
 #'     word, phonetic, phonetics, origin, and meanings
 #'
 #' @export
-#' @import jsonlite
+#' @import jsonlite tibble
 #'
 #' @examples
 #' \dontrun{
 #'   # Get the definition of "hello"
-#'   define("hello") # Returns a 1 row data.frame
+#'   define("hello") # Returns a 3 row data.frame
 #'
 #'   # Homonyms (words with >1 meaning)
-#'   define("bark") # Returns a 4 row data.frame
+#'   define("bark") # Returns a 9 row data.frame
 #'
-#'   # Unknown words will error
+#'   # Unknown words will return a 0 row data.frame and message
 #'   define("sdfsdfsdfsdfsdf")
+#'   # No definition found for sdfsdfsdfsdfsdf
 #'
 #' }
 #'
@@ -72,6 +73,7 @@ define <- function(word) {
       # Technically could be a legitimate 404
       final_df <- make_df()
       message(paste0("No definition found for ", word))
+      final_df <- as_tibble(final_df)
       return(final_df)
     } else {
       # provide any errors other than 404s to expediate debugging
@@ -79,10 +81,6 @@ define <- function(word) {
     }
   }
 
-
-  if("error" %in% class(api_response)) {
-
-    }
 
 
 
@@ -169,8 +167,8 @@ define <- function(word) {
     antonyms_list_of_vectors <- unlist(lapply(row$meanings[[1]]$definitions, function(x) { x$antonyms }), recursive = FALSE)
 
     # This changes a list of empty 'list()' items into a list of lists containing NA
-    synonyms <- sapply(synonyms_list_of_vectors, function(x) {if(length(x) == 0){ c(NA) } else {x}})
-    antonyms <- sapply(antonyms_list_of_vectors, function(x) {if(length(x) == 0){ c(NA) } else {x}})
+    synonyms <- lapply(synonyms_list_of_vectors, function(x) {if(length(x) == 0){ as.character(c(NA)) } else {x}})
+    antonyms <- lapply(antonyms_list_of_vectors, function(x) {if(length(x) == 0){ as.character(c(NA)) } else {x}})
 
 
     # Now place the list of lists into the data.frame column for synonyms and antonyms respectively
@@ -196,6 +194,7 @@ define <- function(word) {
     paste0("https:", final_df$audio)
     )
 
+  final_df <- as_tibble(final_df)
   final_df
 }
 
