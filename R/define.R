@@ -118,7 +118,9 @@ define <- function(word) {
     mini_df$meaning_number <- rep(i, num_rows_mini)
 
     mini_df$phonetic <- rep(row$phonetic, num_rows_mini)
-    mini_df$audio <- rep(row$phonetics[[1]]$audio[1], num_rows_mini) # NOTE: this takes the first item of audio, there may be times when more than one is returned (I haven't seen any cases yet)
+
+    # NOTE: this takes the first item of audio, there may be times when more than one is returned (I haven't seen any cases yet)
+    mini_df$audio <- if(is.null(row$phonetics[[1]]$audio[1])) { NA } else { row$phonetics[[1]]$audio[1] }
     mini_df$origin <- rep(row$origin, num_rows_mini)
 
     # The more tricky ones..
