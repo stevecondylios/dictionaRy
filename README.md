@@ -96,6 +96,9 @@ word_info %>%
 
 ### Phonetics
 
+View the word’s phonetics as expressed in the [International Phonetic
+Alphabet](https://www.ipachart.com/).
+
 ``` r
 word_info %>% 
   select(phonetic)
@@ -242,7 +245,7 @@ Iterate over many words
 ``` r
 words <- c("hello", "bark", "set", "lead")
 
-map_df(words, ~ define(.x))
+purrr::map_df(words, ~ define(.x))
 ```
 
     ## # A tibble: 53 x 11
@@ -267,7 +270,7 @@ Note that words which aren’t found in the English dictionary will return
 ``` r
 words <- c("paint", "sldkfjlsdjkf")
 
-map_df(words, ~ define(.x))
+purrr::map_df(words, ~ define(.x))
 ```
 
     ## No definition found for sldkfjlsdjkf
