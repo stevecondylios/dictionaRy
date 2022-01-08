@@ -41,6 +41,7 @@ define <- function(word) {
     }
 
     temp_df <- data.frame(
+      original = character(),
       word = character(),
       meaning_number = integer(),
       part_of_speech = character(),
@@ -112,6 +113,11 @@ define <- function(word) {
 
     mini_df <- make_df(num_rows_mini)
 
+
+    # The word returned from the dictionary could be an alternate spelling
+    # Hence we store and return both the original input and the word found in
+    # the dictionary when looking up the original
+    mini_df$original <- rep(word, num_rows_mini)
 
     # # word, meaning_group (1, 2, 3, etc), part_of_speech, phonetic, audio, origin, definition, examples, synonyms, antonyms
     mini_df$word <- rep(row$word, num_rows_mini)
