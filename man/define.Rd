@@ -11,10 +11,23 @@ define(word)
 }
 \value{
 A tibble with a row for each unique combination of word, meaning,
-    part of speech, and definition, and a column for the original word input,
-    the word found in the dictionary,
-    meaning_number, part_of_speech, phonetic, audio, origin, definition,
-    example, synonyms, and antonyms.
+    part of speech, and definition. And a column for:
+    \itemize{
+     \item{"original"}{ The original word input. }
+     \item{"word" }{ The word found in the dictionary (may have alternative
+     spelling to the original word input). }
+     \item{"meaning_number"}{ Integer column; each meaning is numbered. }
+     \item{"part_of_speech"}{ The word's part of speech. }
+     \item{"phonetic"}{ The pronunciation of the word as expressed in the
+     \href{https://www.ipachart.com/}{International Phonetic Alphabet}.}
+     \item{"audio"}{ A link to an mp3 audio file providing the word's
+     pronunciation. }
+     \item{"origin"}{ The word's origin. }
+     \item{"definition"}{ The word's definition. }
+     \item{"example"}{ An example of the word's usage. }
+     \item{"synonyms"}{ A list of synonyms, if available. }
+     \item{"antonyms"}{ A list of antonyms, if available. }
+    }
 }
 \description{
 Retrieve the dictionary definition of an English word
