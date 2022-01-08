@@ -141,7 +141,7 @@ define <- function(word) {
 
     # NOTE: this takes the first item of audio, there may be times when more than one is returned (I haven't seen any cases yet)
     mini_df$audio <- if(is.null(row$phonetics[[1]]$audio[1])) { NA } else { row$phonetics[[1]]$audio[1] }
-    mini_df$origin <- rep(row$origin, num_rows_mini)
+    mini_df$origin <- if(is.null(row$origin)){ NA } else {rep(row$origin, num_rows_mini)}
 
     # The more tricky ones..
 
