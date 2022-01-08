@@ -5,6 +5,7 @@
 .RData
 .Ruserdata
 .DS_Store
+^\.DS_Store$ # As found here: https://stackoverflow.com/q/67602424
 .git
 .gitignore
 R/TEMP
