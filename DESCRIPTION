@@ -1,7 +1,7 @@
 Package: dictionaRy
 Type: Package
 Title: Retrieve the Dictionary Definitions of English Words
-Version: 0.1.1
+Version: 0.1.2
 Depends: jsonlite, tibble
 Authors@R: c(
     person("Steve", "Condylios", , "steve.condylios@gmail.com", c("aut", "cre"), 
