@@ -148,7 +148,7 @@ define <- function(word) {
 
     definitions_per_meaning <- sapply(row$meanings[[1]]$definitions, function(x) {nrow(x)})
 
-    mini_df$part_of_speech <- if(is.null(row$part_of_speech)){ NA } else {rep(row$meanings[[1]]$partOfSpeech, definitions_per_meaning)}
+    mini_df$part_of_speech <- if(is.null(row$meanings[[1]]$partOfSpeech)){ NA } else {rep(row$meanings[[1]]$partOfSpeech, definitions_per_meaning)}
 
 
     mini_df$definition <-  c(unlist(sapply(row$meanings[[1]]$definitions, function(x) {x$definition}))) # c(sapply(row$meanings[[1]]$definitions, function(x) {x$definition}))
